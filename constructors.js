@@ -4,9 +4,9 @@ class Car {
     this.model = model;
     this.year = year;
     this.color = color;
-    this.drive = (gear) => {
-      console.log(`Driving in gear ${gear}`);
-    };
+  }
+   drive(gear) {
+    console.log(`Driving in gear ${gear}`);
   }
 }
 
