@@ -1,6 +1,5 @@
 class Animal {
   constructor(age, speed) {
-    this.name = this.constructor.name;
     this.age = age;
     this.speed = speed;
     this.move();
@@ -14,7 +13,9 @@ class Animal {
     } else {
       mode = 'flies';
     }
-    console.log(`This ${this.name} ${mode} at speed of ${this.speed}`);
+    console.log(
+      `This ${this.constructor.name} ${mode} at speed of ${this.speed} `
+    );
   }
 }
 
@@ -27,3 +28,4 @@ class Hawk extends Animal {}
 const rabbit = new Rabbit(1, 25);
 const fish = new Fish(2, 12);
 const hawk = new Hawk(3, 50);
+
