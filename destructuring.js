@@ -27,7 +27,7 @@ const person2 = {
 const { firstName, lastName, age, job = 'Vacant' } = person2;
 console.log(firstName, lastName, age, job);
 
-const displayPerson = ({ firstName, lastName, age, job = 'Vacant' }) => {
+const displayPerson = ({ firstName, lastName, age, job = 'Vacant  ' }) => {
   console.log(firstName, lastName, age, job);
 };
 
