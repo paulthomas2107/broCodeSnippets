@@ -3,7 +3,6 @@ const calculate = () => {
   const principalInput = document.getElementById('principal');
   const rateInput = document.getElementById('rate');
   const yearsInput = document.getElementById('years');
-  const totalDiv = document.getElementById('total-div');
 
   let principal = Number(principalInput.value);
   let rate = Number(rateInput.value / 100);
@@ -25,8 +24,15 @@ const calculate = () => {
   }
   const result = principal * Math.pow(1 + rate / 1, 1 * years);
 
+  const totalDiv = document.getElementById('total-div');
+  totalDiv.style.visibility = 'visible';
   totalAmount.textContent = result.toLocaleString(undefined, {
     style: 'currency',
     currency: 'GBP',
   });
+};
+
+const doStuff = () => {
+  const totalDiv = document.getElementById('total-div');
+  totalDiv.style.visibility = 'hidden';
 };
