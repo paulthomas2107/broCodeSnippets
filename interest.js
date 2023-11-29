@@ -1,9 +1,3 @@
-const hideTotal = () => {
-  try {
-    totalDiv.style.display = 'none';
-  } catch (error) {}
-};
-
 const calculate = () => {
   const totalAmount = document.getElementById('total-amount');
   const principalInput = document.getElementById('principal');
@@ -31,7 +25,6 @@ const calculate = () => {
   }
   const result = principal * Math.pow(1 + rate / 1, 1 * years);
 
-  totalDiv.style.display = 'block';
   totalAmount.textContent = result.toLocaleString(undefined, {
     style: 'currency',
     currency: 'GBP',
