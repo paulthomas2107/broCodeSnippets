@@ -32,3 +32,31 @@ Array.from(h4Elements).forEach((h4) => {
 Array.from(liElements).forEach((liElement) => {
   liElement.style.backgroundColor = 'lightblue';
 });
+
+// Queryselector - first element only
+const element = document.querySelector('.fruits');
+element.style.color = 'white';
+const element2 = document.querySelector('h4');
+element2.style.color = 'yellow';
+const li = document.querySelector('li');
+li.style.color = 'red';
+const ul = document.querySelector('ul');
+li.style.color = 'blue';
+
+// QueryselectorAll
+const fruits2 = document.querySelectorAll('.fruits');
+fruits2[0].style.backgroundColor = 'pink';
+fruits2[1].style.backgroundColor = 'lightpink';
+fruits2[2].style.backgroundColor = 'red';
+const list3 = document.querySelectorAll('li');
+list3[0].style.backgroundColor = 'pink';
+list3[1].style.backgroundColor = 'lightpink';
+list3[2].style.backgroundColor = 'red';
+list3[3].style.backgroundColor = 'red';
+list3[4].style.backgroundColor = 'pink';
+list3[5].style.backgroundColor = 'green';
+//or
+list3.forEach((food) => {
+  food.style.fontSize = '30px';
+});
+    
